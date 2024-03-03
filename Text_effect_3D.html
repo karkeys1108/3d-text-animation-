@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D text </title>
+    <link rel="stylesheet" href="text3d.css">
+    <style>
+        
+        *{
+            font-family: 'Poppins' , sans-serif;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f1f1f1;
+            overflow: hidden;
+        }
+        
+        #text{
+            position: relative;
+            color: #fff;
+            font-weight: 700;
+            font-size: 12em ;
+            line-height: 0.9em;
+            letter-spacing: 2px;
+            text-align: center;
+            transform: rotate(-28deg) skew(25deg);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="text">Follow 
+              <br>Code cafe  </div>    
+    <script>
+        var text =document.getElementById('text')
+        var shadow  = '';
+        for(var i=0 ; i<30 ;i++ )
+        {
+            shadow +=(shadow ? ',':'')+ -i*1+'px ' + i*1+'px 0 #01ded3' ;
+        }
+        text.style.textShadow = shadow ;
+
+    </script>
+</body>
+</html>
